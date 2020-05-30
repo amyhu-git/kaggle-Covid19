@@ -1,6 +1,8 @@
 # Kaggle Competition: Covid-19 Global Forecasting (Week 2)
+<b> https://www.kaggle.com/c/covid19-global-forecasting-week-2 </b>
 
-This repository provides an example in developing a Mulitvariate Regression Model for Data Prediction. 
+This repository provides an example in developing a Mulitvariate Regression Model for Data Prediction.
+
 
 ### Framing the Problem: 
 
@@ -10,7 +12,7 @@ For the evaluation of the regression model, the Root Mean Square Error (RMSE) ra
 
 ### Data Exploration and Preparation
 
-With an interest in exploring the impact of demographics on the transmission of Covid-19, I have integrated the population by country dataset (2020) by tanuprabhu which is freely available on Kaggle.The population data provides the population of each country with the
+With an interest in exploring the impact of demographics on the transmission of Covid-19, I have integrated the population by country dataset (2020) by tanuprabhu which is freely available on Kaggle (see https://www.kaggle.com/tanuprabhu/population-by-country-2020).The population data provides the population of each country with the
  * yearly change, 
  * net change, 
  * density (p/km²), 
@@ -19,7 +21,7 @@ With an interest in exploring the impact of demographics on the transmission of 
  * fertility rate, 
  * median population age, 
  * the percentage of urban population, and
- * the population’s world share contribution. <br><br>
+ * the population’s world share contribution. <br>
 
 Before merging the datasets, column and country names have been adapted in both datasets. <br>
 The Diamond Princess cruise has been listed as a country within the training and testing data. Population data for Diamond Princess have been manually added whereby essential information could be obtained through online resources. For the preparation of the population data, null values have been either removed or have been replaced by the mode values. The datasets have been merged on country names. <br>
