@@ -10,8 +10,19 @@ For the evaluation of the regression model, the Root Mean Square Error (RMSE) ra
 
 ### Data Exploration and Preparation
 
-With an interest in exploring the impact of demographics on the transmission of Covid-19, I have integrated the population by country dataset (2020) by tanuprabhu which is freely available on Kaggle.The population data provides the population of each country with the yearly change, net change, density (p/km²), land area (km²), net value of migrants, fertility rate, median population age, the percentage of urban population as well as the population’s world share contribution. <br>
-Before merging the datasets, column and country names have been adapted in both datasets. The Diamond Princess cruise has been listed as a country within the training and testing data. Population data for Diamond Princess have been manually added whereby essential information could be obtained through online resources. For the preparation of the population data, null values have been either removed or have been replaced by the mode values. The datasets have been merged on country names. <br>
+With an interest in exploring the impact of demographics on the transmission of Covid-19, I have integrated the population by country dataset (2020) by tanuprabhu which is freely available on Kaggle.The population data provides the population of each country with the
+ * yearly change, 
+ * net change, 
+ * density (p/km²), 
+ * land area (km²), 
+ * net value of migrants, 
+ * fertility rate, 
+ * median population age, 
+ * the percentage of urban population, and
+ * the population’s world share contribution. <br><br>
+
+Before merging the datasets, column and country names have been adapted in both datasets. <br>
+The Diamond Princess cruise has been listed as a country within the training and testing data. Population data for Diamond Princess have been manually added whereby essential information could be obtained through online resources. For the preparation of the population data, null values have been either removed or have been replaced by the mode values. The datasets have been merged on country names. <br>
 With a partial intersection of dates between training and test data, the date values have been adapted for the training data to end on 18th March 2020 and for the test data to start on 19th March 2020. As the timestamp values cannot be interpreted within the Regression model, new independent values have been created providing the year, month, week, day of the year and day of the week. The official date value has been turned into an integer value. <br>
 With a high number of undefined values for the State values, these have been removed and a new variable ‘geo‘ has been generated to combine the country and state names if available. All the data preparation has been applied to both the test and train set. <br>
 For the preparation of the input data, correlations between the attributes and the number of confirmed cases and fatalities have been assessed. Both the number of confirmed cases and fatalities have only small correlations with to the size of population (r_cases = 0.15; r_fatalities = 0.12), world share contribution (r_cases = 0.15; r_fatalities =0.12) and net change rate of the population (r_cases = 0.12; r_fatalities = 0.10).  The variables ‘Density’ and ‘dayofweek‘ have been removed showing the lowest correlation with the target values. <br>
